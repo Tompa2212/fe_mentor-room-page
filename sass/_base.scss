@@ -1,0 +1,171 @@
+:root {
+  --dark-gray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --very-dark-gray: hsl(0, 0%, 27%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: 500px) {
+    font-size: 57%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Spartan", sans-serif;
+  color: var(--very-dark-gray);
+}
+
+a:visited {
+  color: var(--white);
+}
+
+.container {
+  max-width: 128rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* FLEX */
+.row {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+.heading-1 {
+  max-width: 15ch;
+  margin-bottom: 3rem;
+}
+
+.heading-2 {
+  font-size: 3rem;
+  color: var(--black);
+  margin-bottom: 3rem;
+}
+.heading-3 {
+  color: var(--black);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+}
+.heading-4 {
+  font-size: 2.4rem;
+  margin-top: 3rem;
+}
+
+.paragraph {
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 500px) {
+  .paragraph {
+    font-size: 1.4rem;
+  }
+}
+
+//SHOW MORE BUTTON
+.btn {
+  background: transparent;
+  border: transparent;
+  font-size: 2rem;
+  margin-top: 3rem;
+  text-decoration: none;
+
+  .btn-link {
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: 1rem;
+
+    .arrow {
+      font-size: 3rem;
+    }
+  }
+
+  .btn-link:hover {
+    color: var(--dark-gray);
+  }
+}
+
+.btn-featured {
+  text-decoration: none;
+  background: var(--very-dark-gray);
+  color: var(--white) !important;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 1px solid var(--white);
+
+  &:hover {
+    background: var(--white);
+    color: var(--very-dark-gray) !important;
+  }
+}
+
+//ARROWS BUTTONS
+.btn-arrow {
+  background: var(--very-dark-gray);
+  border: none;
+  cursor: pointer;
+  padding: 2rem 3rem;
+  margin: 0;
+
+  &:hover {
+    background: var(--dark-gray);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .btn-arrow {
+    padding: 1.5rem 2.5rem;
+  }
+}
+
+//NAVIGATION BUTTON(HAMBURGER)
+.nav-toggle {
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+
+  img {
+    width: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heading-1 {
+    font-size: 2.6rem;
+  }
+  .btn {
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+
+    .btn-link {
+      letter-spacing: 0.5rem;
+
+      .arrow {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .heading-1 {
+    font-size: 2.2rem;
+  }
+}

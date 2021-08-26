@@ -1,0 +1,98 @@
+//MOBILE FIRST NAVIGATION DESIGN
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 74px;
+  z-index: 5;
+  transition: all 0.3s ease;
+
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  .nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 4rem;
+
+    .nav-link {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 1rem 0rem;
+      display: block;
+      position: relative;
+    }
+  }
+}
+
+.nav-toggled {
+  background: var(--black);
+}
+
+.nav-toggled .nav-links {
+  height: 100vh !important;
+}
+
+.nav-scrolled {
+  background: var(--black);
+}
+
+@media screen and (min-width: 949px) {
+  .nav-header {
+    padding: 0;
+    margin-right: 3rem;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    height: auto !important;
+    text-align: center;
+    display: flex;
+    margin-top: 0rem !important;
+
+    li {
+      margin-right: 2.5rem;
+    }
+
+    .nav-link {
+      display: inline-block;
+      padding: 1rem;
+      color: var(--white);
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        background-color: var(--white);
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        &::after {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
